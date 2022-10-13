@@ -57,6 +57,27 @@ function generatePassword() {
   //Arrays of special characters to to select from
   var specialCharaters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '?', '>', '<'];
 
+  var optionsCart = []
+
+
+  //conditional statement for each criteria user confirms
+  if (userWantsLoweredCased === true) {
+    optionsCart.push(loweredCased)
+  }
+
+  if (userWantsUpperedCased === true) {
+    optionsCart.push(upperedCased)
+  }
+
+  if (userWantsNumbersChoice === true) {
+    optionsCart.push(numbersChoice)
+  }
+
+  if (userWantsSpecialCharacters === true) {
+    optionsCart.push(specialCharaters)
+  }
+
+
 }
 
 // Write password to the #password input
