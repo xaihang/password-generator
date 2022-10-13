@@ -7,4 +7,4 @@ An application that allows employees to generate passwords based on criteria tha
 
 The following animation shows the web application's appearance and functionality:
 
-![portfolio demo]()
+![password generator demo]()
