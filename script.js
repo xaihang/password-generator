@@ -1,27 +1,24 @@
-
-
-
-
 //assignment criteria:
 // 1. prompt user password criteria x
 //   a. password length 8 < 128 x
-//   b. type: lowered cased, uppered cased, sepcial characters, & numbers 
+//   b. type: lowered cased, uppered cased, sepcial characters, & numbers x
 // 2. validates user's input x
 // 3. generate password based on user's allowed/selected criteria
 // 4. display password on the page x
 
 
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//function: getting a random interger between the min-max criteria 
 function randomInt(min, max) {
-  return math.floor(math.random() * (max - min) + min)
-
+  if (!max) {
+    max = min
+    min = 0
+  }
+  var rand = Math.random()
+  return Math.floor(min * (1 - rand) + rand * max)
 }
 
-//function: getting a random item from a list 
 function getRandomItems(list) {
   return list[randomInt(0, list.length - 1)]
 
@@ -92,7 +89,10 @@ function generatePassword() {
   var generatePassword = ""
 
   for (var i = 0; i < passwordLength; i++) {
-    var randomList = getRandomItems
+    var randomList = getRandomItems(optionsCart)
+    var randomChar = getRandomItems(randomList)
+
+    console.log(randomChar)
   }
 
 }
