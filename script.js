@@ -15,6 +15,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//function: getting a random interger between the min-max criteria 
+function randomInt(min, max) {
+  return math.floor(math.random() * (max - min) + min)
+
+}
+
+//function: getting a random item from a list 
+function getRandomItems(list) {
+  return list[randomInt(0, list.length - 1)]
+
+}
+
 
 function generatePassword() {
 
@@ -35,7 +47,7 @@ function generatePassword() {
   }
 
   // criteria prompts for users
-  var userWantsNumbers = window.confirm("Do you want to have numbers in your password?")
+  var userWantsNumbersChoice = window.confirm("Do you want to have numbers in your password?")
   var userWantsLoweredCased = window.confirm("Do you want to have lowered cased letters in your password?")
   var userWantsUpperedCased = window.confirm("Do you want to have uppered cased letters in your password?")
   var userWantsSpecialCharacters = window.confirm("Do you want to have special characters in your password?")
@@ -77,6 +89,11 @@ function generatePassword() {
     optionsCart.push(specialCharaters)
   }
 
+  var generatePassword = ""
+
+  for (var i = 0; i < passwordLength; i++) {
+    var randomList = getRandomItems
+  }
 
 }
 
