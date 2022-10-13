@@ -39,7 +39,10 @@ function generatePassword() {
     return
   }
 
-  var userWantsNumbers = window.confirm("Do you want to numbers in your password?")
+  var userWantsNumbers = window.confirm("Do you want to have numbers in your password?")
+  var userWantsLoweredCased = window.confirm("Do you want to have lowered cased letters in your password?")
+  var userWantsUpperedCased = window.confirm("Do you want to have uppered cased letters in your password?")
+  var userWantsSpecialCharacters = window.confirm("Do you want to have special characters in your password?")
 
 
 }
