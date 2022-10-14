@@ -11,17 +11,17 @@
 var generateBtn = document.querySelector("#generate");
 
 function randomInt(min, max) {
-  if (!max) {
-    max = min
-    min = 0
-  }
-  var rand = Math.random()
-  return Math.floor(min * (1 - rand) + rand * max)
+  // if (!max) {
+  //   max - min
+  //   min = 0
+  // }
+  // var rand = Math.random()
+  return Math.floor(Math.random() * max);
+  // return Math.floor(min * (1 - rand) + rand * max)
 }
 
 function getRandomItems(list) {
-  return list[randomInt(0, list.length - 1)]
-
+  return list[randomInt(0, list.length)]
 }
 
 
@@ -86,14 +86,20 @@ function generatePassword() {
     optionsCart.push(specialCharaters)
   }
 
+  // console.log(optionsCart) 
+
   var generatePassword = ""
 
   for (var i = 0; i < passwordLength; i++) {
     var randomList = getRandomItems(optionsCart)
+    console.log('randomlist', randomList)
     var randomChar = getRandomItems(randomList)
 
-    console.log(randomChar)
+    // console.log(randomChar)
+    generatePassword += randomChar;
   }
+
+  console.log('generated password', generatePassword)
 
 }
 
