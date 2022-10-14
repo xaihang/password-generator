@@ -3,7 +3,7 @@
 //   a. password length 8 < 128 x
 //   b. type: lowered cased, uppered cased, sepcial characters, & numbers x
 // 2. validates user's input x
-// 3. generate password based on user's allowed/selected criteria
+// 3. generate password based on user's allowed/selected criteria x
 // 4. display password on the page x
 
 
@@ -87,19 +87,16 @@ function generatePassword() {
     optionsCart.push(numbersChoice)
   }
 
-  var generatePassword = ""
+  var generatedPassword = ""
 
   for (var i = 0; i < passwordLength; i++) {
     var randomList = getRandomItems(optionsCart)
-    //console.log('randomlist', randomList)
     var randomChar = getRandomItems(randomList)
 
-    //console.log(randomChar)
-    generatePassword += randomChar;
+    generatedPassword += randomChar;
   }
 
-  // console.log('generated password', generatePassword)
-
+  return generatedPassword
 }
 
 // Write password to the #password input
