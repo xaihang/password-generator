@@ -10,21 +10,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+//logics for function to run through
 function randomInt(min, max) {
-  // if (!max) {
-  //   max - min
-  //   min = 0
-  // }
-  // var rand = Math.random()
   return Math.floor(Math.random() * max);
-  // return Math.floor(min * (1 - rand) + rand * max)
+
 }
 
 function getRandomItems(list) {
   return list[randomInt(0, list.length)]
 }
 
-
+//password generator criteria var and conditional statements
 function generatePassword() {
 
   var userInput = window.prompt("What length of password would you like?")
@@ -85,21 +82,23 @@ function generatePassword() {
   if (userWantsSpecialCharacters === true) {
     optionsCart.push(specialCharaters)
   }
-
-  // console.log(optionsCart) 
+  //if user donot confirm any criteria it will default generate numbers type password
+  if (optionsCart.length === 0) {
+    optionsCart.push(numbersChoice)
+  }
 
   var generatePassword = ""
 
   for (var i = 0; i < passwordLength; i++) {
     var randomList = getRandomItems(optionsCart)
-    console.log('randomlist', randomList)
+    //console.log('randomlist', randomList)
     var randomChar = getRandomItems(randomList)
 
-    // console.log(randomChar)
+    //console.log(randomChar)
     generatePassword += randomChar;
   }
 
-  console.log('generated password', generatePassword)
+  // console.log('generated password', generatePassword)
 
 }
 
